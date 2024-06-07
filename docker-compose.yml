@@ -1,0 +1,9 @@
+services:
+
+  cocktail_bdd:
+    container_name: ctn_cesi_bdd
+    image: mariadb:latest
+
+  cocktail_api:
+
+  adminer:
