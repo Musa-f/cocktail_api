@@ -22,5 +22,5 @@ jobs:
           run: pm2 restart pm2.config.js
 
   tests:
-    uses: ./.github/workflows/tests.yaml
+    uses: ./.github/workflows/test.yaml
       
