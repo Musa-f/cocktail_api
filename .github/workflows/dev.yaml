@@ -22,5 +22,6 @@ jobs:
           run: pm2 restart pm2.config.js
 
   tests:
+    needs: [deploy]
     uses: ./.github/workflows/test.yaml
       
