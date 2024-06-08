@@ -12,17 +12,17 @@ services:
       MARIADB_PASSWORD: regor
     profiles: [local, dev, prod]
 
-  cocktail_api:
-    container_name: ctn_cocktail_api
-    image: alievna/cocktail
-    restart: always
-    depends_on:
-      - cocktail_bdd
-    environment:
-      BDD_HOST: cocktail_bdd
-    ports:
-      - 23000:15000
-    profiles: [dev, prod]
+  # cocktail_api:
+  #   container_name: ctn_cocktail_api
+  #   image: alievna/cocktail
+  #   restart: always
+  #   depends_on:
+  #     - cocktail_bdd
+  #   environment:
+  #     BDD_HOST: cocktail_bdd
+  #   ports:
+  #     - 23000:15000
+  #   profiles: [dev, prod]
   
   adminer:
     container_name: ctn_cocktail_adminer
