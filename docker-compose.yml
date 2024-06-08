@@ -1,20 +1,20 @@
 services:
 
   cocktail_bdd:
-    container_name: ctn_cesi_bdd
+    container_name: ctn_cocktail_bdd
     image: mariadb:latest
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
       MARIADB_ROOT_PASSWORD: TOOR
-      MARIADB_DATABASE: cesi
+      MARIADB_DATABASE: cocktail
       MARIADB_USER: roger
       MARIADB_PASSWORD: regor
     profiles: [local, dev, prod]
 
   cocktail_api:
     container_name: ctn_cocktail_api
-    image: alievna/cocktail:main
+    image: alievna/cocktail
     restart: always
     depends_on:
       - cocktail_bdd

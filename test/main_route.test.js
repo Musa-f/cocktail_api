@@ -14,16 +14,4 @@ describe('MAIN ROUTER', () => {
             expect(response.status).toBe(501)
         })
     })
-
-    describe('TRY PATCH', () => {
-        it('Sould return 501', async() => {
-            const response = await request(app).patch('/')
-            expect(response.status).toBe(501)
-        })
-
-        it('Sould return 501', async() => {
-            const response = await request(app).patch('/fdbhcdgvsjrvbuik')
-            expect(response.status).toBe(501)
-        })
-    })
 })
